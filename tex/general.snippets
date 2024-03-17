@@ -159,13 +159,13 @@ endsnippet
 # ---------------------------------------------------------------
 
 # packages
-snippet package "import package" bA
+snippet package "import package" b
 \usepackage[$2]{$1}
 $0
 endsnippet
 
 # math packages
-snippet pacmath "collection of math packages" bA
+snippet pacmath "collection of math packages" b
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -175,7 +175,7 @@ endsnippet
 
 
 # links
-snippet href "LaTeX's \href{}{} command"
+snippet href "LaTeX's \href{}{} command" w
 \href{$1:url}{$2:displayName} $0
 endsnippet
 
@@ -189,17 +189,17 @@ $0
 endsnippet
 
 # italic text
-snippet textit "Italicize text"
+snippet textit "Italicize text" w
 \textit{${1:${VISUAL:}}}$0
 endsnippet
 
 # bold text
-snippet bold "bold text" 
+snippet bold "bold text" w
 \textbf{${1:${VISUAL:}}}$0
 endsnippet
 
 # enumerate list
-snippet enum "ordered list" bA
+snippet enumerate "ordered list" b
 \begin{enumerate}
 	\item $1
 \end{enumerate}
@@ -208,7 +208,7 @@ $0
 endsnippet
 
 # itemize list
-snippet item "unordered list" bA
+snippet itemize "unordered list" b
 \begin{itemize}
 	\item $1
 \end{itemize}
@@ -216,18 +216,22 @@ snippet item "unordered list" bA
 $0
 endsnippet
 
+snippet item "list item" 
+\item ${1:${VISUAL:}}$0
+endsnippet
+
 # superscript
-snippet ^ "text superscript" iA
-textsuperscript{$1}$0
+snippet ^ "text superscript" i
+\textsuperscript{$1}$0
 endsnippet
 
 # inline math
-snippet imath "inline math environment" A
+snippet imath "inline math environment" w
 \( $1 \)$0
 endsnippet
 
 # block math
-snippet bmath "block math environment" A
+snippet bmath "block math environment" b
 \[
 	$1
 \]
@@ -236,7 +240,7 @@ $0
 endsnippet
 
 # align star enironment
-snippet ali "align* environment" A
+snippet ali "align* environment" b
 \begin{align*}
 	$1  &= $2 \\
 		&= $3 \\

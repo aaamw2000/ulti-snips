@@ -17,95 +17,95 @@ endglobal
 
 ## fraction
 context "math()"
-snippet frac "LaTeX \frac{}{} command" A
+snippet frac "LaTeX \frac{}{} command" w
 \frac{$1}{$2}$0
 endsnippet
 
 ## square root
 context "math()"
-snippet sqrt "squre root" A
+snippet sqrt "squre root" w
 \sqrt{${1:${VISUAL:}}}$0
 endsnippet
 
 ## 2D point
 context "math()"
-snippet pp "make (x,y) point" A
+snippet pp "make (x,y) point" w
 (${1:x}, ${2:y})$0
 endsnippet
 
 context "math()"
-snippet pxy "make variable (x,y)" A
+snippet pxy "make variable (x,y)" w
 (x, y)$0
 endsnippet
 
 ## 3D point
 context "math()"
-snippet tp "make (x,y,z) point" A
+snippet tp "make (x,y,z) point" w
 (${1:x}, ${2:y}, ${3:z})$0
 endsnippet
 
 context "math()"
-snippet tpxyz "make variable (x,y,z)" A
+snippet tpxyz "make variable (x,y,z)" w
 (x, y, z)$0
 endsnippet
 
 ## function f/h/g...(x,y,z,...)
 context "math()"
-snippet fx "function f(x)" A
+snippet fx "function f(x)" w
 f(x)$0
 endsnippet
 
 context "math()"
-snippet hx "function f(x)" A
+snippet hx "function f(x)" w
 h(x)$0
 endsnippet
 
 context "math()"
-snippet gx "function f(x)" A
+snippet gx "function f(x)" w
 g(x)$0
 endsnippet
 
 context "math()"
-snippet func "generic f function" A
+snippet func "generic f function" w
 f\left($1\right)$0
 endsnippet
 
 context "math()"
-snippet hunc "generic h function" A
+snippet hunc "generic h function" w
 h\left($1\right)$0
 endsnippet
 
 context "math()"
-snippet gunc "generic g function" A
+snippet gunc "generic g function" w
 g\left($1\right)$0
 endsnippet
 
 ## generic logarithm
 context "math()"
-snippet log "logarithm" A
-\log_{${1:x}$0
+snippet log "logarithm" w
+\log_{${1:base}}$0
 endsnippet
 
 ## common logarithm
 context "math()"
-snippet logten "log base 10" A
+snippet logten "log base 10" w
 \log_{10}\left($1\right\)$0
 endsnippet
 
 ## base 2 logarithm
 context "math()"
-snippet logtwo "log base 2" A
+snippet logtwo "log base 2" w
 \log_{2}\left(${1:x}\right)$0
 endsnippet
 
 ## natural logarithm
 context "math()"
-snippet lnn "gaussian logarithm" A
+snippet lnn "gaussian logarithm" w
 \ln\left($1\right)$0
 endsnippet
 
 context "math()"
-snippet lnx "ln(x)" A
+snippet lnx "ln(x)" w
 \ln(x)$0
 endsnippet
 
@@ -115,47 +115,78 @@ endsnippet
 
 ## parenthesis
 context "math()"
-snippet ( "faster and cleaner parenth" A
+snippet paren "faster and cleaner parenth" w
 \left( $1 \right)$0
 endsnippet
 
 context "math()"
-snippet [ "faster and cleanre bracket" A
+snippet brack "faster and cleanre bracket" w
 \left[ $1 \right]$0
 endsnippet
 
 context "math()"
-snippet implies "implies right arrow" A
+snippet " power" "quick exponents" iAs
+^{$1}$0
+endsnippet
+
+context "math()"
+snippet " sub" "subtext" Aw
+_{$1}$0
+endsnippet
+
+context "math()"
+snippet " one" "sub 1" Aw
+_{1}$0
+endsnippet
+
+context "math()"
+snippet " two" "sub 2" Aw
+_{2}$0
+endsnippet
+
+context "math()"
+snippet " three" "Description" Aw
+_{3}$0
+endsnippet
+
+context "math()"
+snippet " subn" "sub n" Aw
+_{n}$0
+endsnippet
+
+
+context "math()"
+snippet implies "implies right arrow" w
 \implies$0
 endsnippet
 
 context "math()"
-snippet notimplies "negated implies arrow" A
+snippet notimplies "negated implies arrow" w
 \centernot\implies$0
 endsnippet
 
 context "math()"
-snippet times "times symbol (x)" A
+snippet times "times symbol (x)" w
 \times$0
 endsnippet
 
 context "math()"
-snippet inf "infinity" A
+snippet inf "infinity" w
 \infty$0
 endsnippet
 
 context "math()"
-snippet ninf "negative infinity" A
+snippet ninf "negative infinity" w
 -\infty$0
 endsnippet
 
 context "math()"
-snippet since "upside pyramid of dots meaning since" A
+snippet since "upside pyramid of dots meaning since" w
 \because$0
 endsnippet
 
 context "math()"
-snippet then "pyramid of dots meaning therefore" A
+snippet then "pyramid of dots meaning therefore" w
 \therefore$0
 endsnippet
 
@@ -164,32 +195,32 @@ endsnippet
 # section: Summations
 
 context "math()"
-snippet summ "summation" A
+snippet summ "summation" w
 \sum_{${1:i}={$2}}^{${3:n}}$0
 endsnippet
 
 context "math()"
-snippet isum "sum over i" A
+snippet isum "sum over i" w
 \sum_{i=${1:0}}^{${2:n}}$0
 endsnippet
 
 context "math()"
-snippet xsum "sum over x values" A
+snippet xsum "sum over x values" w
 \sum_{x=${1:0}}^{${2:n}}$0
 endsnippet
 
 context "math()"
-snippet ysum "sum over y values" A
+snippet ysum "sum over y values" w
 \sum_{y=${1:0}}^{${2:n}}$0
 endsnippet
 
 context "math()"
-snippet infsum "infinite sum from zero to inf" A
+snippet infsum "infinite sum from zero to inf" w
 \sum_0^{\infty}$0
 endsnippet
 
 context "math()"
-snippet sumover "sum over certain values" A
+snippet sumover "sum over certain values" w
 \sum_{values}$0
 endsnippet
 
@@ -198,27 +229,27 @@ endsnippet
 # section: products
 
 context "math()"
-snippet prodd "pi product" A
+snippet prodd "pi product" w
 \prod_{${1:i} = ${2:0}}^{${3:n}}$0
 endsnippet
 
 context "math()"
-snippet infprod "infinite product" A
+snippet infprod "infinite product" w
 \prod_{1}^{\infty}$0
 endsnippet
 
 context "math()"
-snippet iprod "prodcut over i values" A
+snippet iprod "prodcut over i values" w
 \prod_{i}$0
 endsnippet
 
 context "math()"
-snippet xprod "product over x values" A
+snippet xprod "product over x values" w
 \prod_{x}$0
 endsnippet
 
 context "math()"
-snippet yprod "prodcut over y values" A
+snippet yprod "prodcut over y values" w
 \prod_{x}$0
 endsnippet
 

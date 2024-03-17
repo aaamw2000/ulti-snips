@@ -8,35 +8,34 @@ endglobal
 # - basic and infinite integrals
 # ---------------------------------------------------------------
 
- section: integral calculus
+# section: integral calculus
 
 ## generic integral
 context "math()"
-snippet iint "generic integral" A
-\int_{$1}^{$2} $0 \ d${3:x}
+snippet int "generic integral" w
+\int_{$1}^{$2} $4 \ d${3:x} $0
 endsnippet
 
 ## ninf to inf integral
 context "math()"
-snippet niinti "negative infinity to infintity integral" A
-\int{-\infty}^{\infty} $0 \ d${1:x}
+snippet infint "negative infinity to infintity integral" w
+\int{-\infty}^{\infty} $2 \ d${1:x} $0
 endsnippet
 
 ## zero to inf integral
 context "math()"
-snippet zintinf "zero to infinity integral" A
-\int{0}^{\infty} $0 \ d${1:x}
+snippet zinfint "zero to infinity integral" w
+\int{0}^{\infty} $2 \ d${1:x} $0
 endsnippet
 
 ## double integral
 context "math()"
-snippet dint "double integral" A
-\iint_{$1}^{$2} $0 \ d${3:x}d${4:y}
+snippet dint "double integral" w
+\iint_{$1}^{$2} $5 \ d${3:x}d${4:y} $0
 endsnippet
 
 ## filled double integral
 context "math()"
-snippet ddint "double integral over area" A
-\iint_{${1:area}} $0 \ d$1
+snippet ddint "double integral over area" w
+\iint_{${1:area}} $3 \ d$2 $0
 endsnippet
-
